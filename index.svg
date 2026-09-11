@@ -5,7 +5,7 @@
   width="100%"
   height="100%"
   viewBox="0 0 1920 1080"
-  preserveAspectRatio="xMidYMid meet">
+  preserveAspectRatio="none">
 
   <foreignObject x="0" y="0" width="100%" height="100%">
     <xhtml:html xmlns="http://www.w3.org/1999/xhtml" lang="en">
@@ -20,16 +20,16 @@
             height: 100%;
             overflow: hidden;
           }
+
           .iframe-container {
             width: 100%;
             height: 100%;
           }
+
           iframe {
             width: 100%;
             height: 100%;
             border: none;
-            transform: scale(1);
-            transform-origin: center;
           }
         </xhtml:style>
       </xhtml:head>
