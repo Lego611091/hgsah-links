@@ -33,28 +33,28 @@
             border: none;
             transform-origin: top center;
           }
-
-          /* 📱 Phones */
-          @media (max-width: 600px) {
-            iframe {
-              transform: scale(0.85);
-            }
-          }
-
-          /* 📟 Tablets */
-          @media (min-width: 601px) and (max-width: 1024px) {
-            iframe {
-              transform: scale(0.95);
-            }
-          }
-
-          /* 🖥️ Desktops */
-          @media (min-width: 1025px) {
-            iframe {
-              transform: scale(1);
-            }
-          }
         </xhtml:style>
+
+        <xhtml:script>
+          function adjustScale() {
+            const w = window.innerWidth;
+            const iframe = document.querySelector("iframe");
+
+            if (!iframe) return;
+
+            if (w <= 600) {
+              iframe.style.transform = "scale(0.80)";
+            } else if (w <= 1024) {
+              iframe.style.transform = "scale(0.95)";
+            } else {
+              iframe.style.transform = "scale(1)";
+            }
+          }
+
+          window.addEventListener("resize", adjustScale);
+          window.addEventListener("load", adjustScale);
+        </xhtml:script>
+
       </xhtml:head>
 
       <xhtml:body>
