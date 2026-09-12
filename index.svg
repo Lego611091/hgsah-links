@@ -8,12 +8,12 @@
   preserveAspectRatio="none">
 
   <foreignObject x="0" y="0" width="100%" height="100%">
-    <xhtml:html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-      <xhtml:head>
-        <xhtml:meta charset="UTF-8"/>
-        <xhtml:meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+      <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <xhtml:style>
+        <style>
           html, body {
             margin: 0;
             padding: 0;
@@ -33,9 +33,9 @@
             border: none;
             transform-origin: top center;
           }
-        </xhtml:style>
+        </style>
 
-        <xhtml:script>
+        <script>
           function adjustScale() {
             const w = window.innerWidth;
             const iframe = document.querySelector("iframe");
@@ -53,21 +53,21 @@
 
           window.addEventListener("resize", adjustScale);
           window.addEventListener("load", adjustScale);
-        </xhtml:script>
+        </script>
 
-      </xhtml:head>
+      </head>
 
-      <xhtml:body>
-        <xhtml:div class="iframe-container">
-          <xhtml:iframe
+      <body>
+        <div class="iframe-container">
+          <iframe
             src="https://quantum-services-theta.vercel.app"
             sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
             allowfullscreen="true"
             referrerpolicy="no-referrer"
             loading="lazy">
-          </xhtml:iframe>
-        </xhtml:div>
-      </xhtml:body>
-    </xhtml:html>
+          </iframe>
+        </div>
+      </body>
+    </html>
   </foreignObject>
 </svg>
