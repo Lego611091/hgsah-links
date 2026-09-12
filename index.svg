@@ -4,15 +4,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   width="100%"
   height="100%"
-  viewBox="0 0 1280 720"
+  viewBox="0 0 1920 1080"
   preserveAspectRatio="none">
 
   <foreignObject x="0" y="0" width="100%" height="100%">
-    <xhtml:html lang="en">
+    <xhtml:html xmlns="http://www.w3.org/1999/xhtml">
       <xhtml:head>
         <xhtml:meta charset="UTF-8"/>
         <xhtml:meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
         <xhtml:style>
           html, body {
             margin: 0;
@@ -21,54 +20,22 @@
             height: 100%;
             overflow: hidden;
           }
-
-          .iframe-container {
-            width: 100%;
-            height: 100%;
-          }
-
           iframe {
             width: 100%;
             height: 100%;
             border: none;
-            transform-origin: top center;
           }
         </xhtml:style>
-
-        <xhtml:script>
-          <![CDATA[
-            function adjustScale() {
-              const w = window.innerWidth;
-              const iframe = document.querySelector("iframe");
-
-              if (!iframe) return;
-
-              if (w <= 600) {
-                iframe.style.transform = "scale(0.80)";
-              } else if (w <= 1024) {
-                iframe.style.transform = "scale(0.95)";
-              } else {
-                iframe.style.transform = "scale(1)";
-              }
-            }
-
-            window.addEventListener("resize", adjustScale);
-            window.addEventListener("load", adjustScale);
-          ]]>
-        </xhtml:script>
-
       </xhtml:head>
 
       <xhtml:body>
-        <xhtml:div class="iframe-container">
-          <xhtml:iframe
-            src="https://quantum-services-theta.vercel.app"
-            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-            allowfullscreen="true"
-            referrerpolicy="no-referrer"
-            loading="lazy">
-          </xhtml:iframe>
-        </xhtml:div>
+        <xhtml:iframe
+          src="https://quantum-services-theta.vercel.app"
+          sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+          allowfullscreen="true"
+          referrerpolicy="no-referrer"
+          loading="lazy">
+        </xhtml:iframe>
       </xhtml:body>
     </xhtml:html>
   </foreignObject>
